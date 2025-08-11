@@ -100,7 +100,7 @@ Volviendo, uno podría escribir lo que dije en la demo 1 más en palabras, y ser
 #pregunta[Cómo escribirían esa demo en palabras?]
 
 #proof[
-    Nótese que $a$ sumado a $c$ es equivalente a sí mismo. Luego, por axioma de suma de cero, podemos sumar un cero a la $a$ de la izquierda, y sumar un cero a la $c$ de la izquierda, y obtener el enunciado del teorema.
+    Nótese que $a$ sumado a $c$ es equivalente a sí mismo. Luego, por axioma de suma de cero, podemos sumar un cero a la $a$ de la izquierda, y sumar un cero a la $c$ de la derecha, y obtener el enunciado del teorema.
 ]
 
 Esta es la idea de las demos que ustedes deberían escribir en una materia como Algo 3. Aunque el texto esté escrito en español, debería poder pasarse fácilmente a un lenguaje formal. Imagínense a un estudiante como ustedes que además se sepa la sintaxis de Lean y que se sepa los nombres que tienen los teoremas y los axiomas en Lean, de la misma manera que ustedes saben cómo escribir un `for` en Python; esa persona debería poder traducir su demostración a Lean de la misma manera que ustedes leerían un código en C++ y lo traducirían a Python, haciendo de "compiladores" de español a Lean.
@@ -154,9 +154,6 @@ Encontrar estos errores es muy parecido a debuggear un programa, porque literalm
 == Recomendaciones
 === Pasen las ideas a definiciones formales.
 Por ejemplo, qué quiere decir "círculo"? En grafos, qué quiere decir "camino"? Qué quiere decir "el máximo de un conjunto"? Sin pasar estas ideas a definiciones formales no podemos aplicarles los teoremas y axiomas que son súper útiles, y nos quedamos siempre en el mundo de la intuición.
-
-#theorem[]
-#proof[asdasd]
 
 === Sépanse los axiomas y teoremas comunes del área.
 De la misma manera que no podíamos probar formalmente el teoremita del principio sin saber los axiomas de la suma, no vamos a poder probar nada formalmente sin saber los axiomas y teoremas de la cosa que estamos tratando de probar. Por ejemplo, en Algo 3, si quieren demostrar cosas sobre grafos, como los grafos son solo un par de conjuntos, tienen que saber los axiomas y teoremas de conjuntos, secuencias, y funciones.
