@@ -2,6 +2,8 @@
 #import themes.metropolis: *
 #import "@preview/theorion:0.3.2": *
 #import cosmos.clouds: *
+#import "@preview/curryst:0.5.1": rule, prooftree
+
 #show: show-theorion
 
 #show: metropolis-theme.with(
@@ -21,7 +23,17 @@
 
 == Qué #("$#%\*&") es una demostración?
 
-Una secuencia de aplicaciones de axiomas y teoremas.
+Una secuencia de aplicaciones de *axiomas* y *teoremas*.
+
+#pause
+
+Tiene *reglas de inferencia* para llevar de un estado a otro.#footnote[https://en.wikipedia.org/wiki/Formal_system]
+
+#pause
+#v(3em)
+$
+prooftree(rule(B, A, A arrow.double B))
+$
 
 = Ejemplos
 
