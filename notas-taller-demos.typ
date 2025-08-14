@@ -40,7 +40,15 @@
 #show link: set text(blue)
 #show heading: it => it + v(1em)
 
+
+#v(1.2em)
 = Qué es una demo?
+#place(top + right)[#text(luma(150))[
+  Eric Brandwein\
+  25/08/2025\
+  Cubaweeki 2025
+]]
+#line(length: 100%)
 
 #pregunta[De qué carreras son? Quién es de compu? Quién es de datos? Quién es de otra carrera, y de qué carrera son?]
 
@@ -146,12 +154,23 @@ Por suerte no hay manera que sepamos de llegar a un resultado falso haciendo tod
 Hay seguro mejores ejemplos en resueltos de Algo 3 de CubaWiki.
 
 
+=== Cómo encontrar estos errores
+Encontrar estos errores es muy parecido a debuggear un programa, porque literalmente están buscando un bug en un algoritmo: su demostración. 
 
-Encontrar estos errores es muy parecido a debuggear un programa, porque literalmente están buscando un bug en un algoritmo: su demostración. E igual a debuggear un código, uno necesita práctica para detectar los errores más comunes, tipo dividir por cero, acceder a una posición de memoria inválida, etc. Lo malo es que a diferencia del código en Python, para correr este algoritmo hay que o correrlo en la cabeza, que es súper poco confiable, o pasarlo a un lenguaje formal, lo cual tarda el cuádruple#footnote[Resulta que a de Bruijn se le ocurrió primero pensar en la comparación entre escribir una demo en lenguaje natural y en un lenguaje formal, y parece que más o menos para cualquier demostración se mantiene constante la relación; es decir, no es que demostraciones informales más largas ahorran cada vez más cosas, sino que la cantidad de líneas que se ahorran por cada línea informal escrita es constante y más o menos 4, dependiendo del área. A esto se lo llama el _factor de de Bruijn_ y hay gente que #link("https://www.cs.ru.nl/~freek/factor/")[lo analizó].].
+1. Si tienen un contraejemplo, corran la demo en su contraejemplo para ver dónde se equivocaron. Alguna de las afirmaciones va a ser la primera en la que se equivocaron; identifiquen cuál de los errores de arriba es el causante y arréglenlo. Obviamente, sigan corriendo la demo con este ejemplo para ver si no hay más errores.
+
+2. Como en programación, tengan una "batería de tests". Busquen casos borde que puedan romper todo. Qué pasa si el conjunto tiene 0, 1 o 2 elementos? Qué pasa si el número es negativo? etc.
+
+3. Si no es suficiente, hay que volver al debuggeo manual: ir línea por línea y ver si es correcta. Cada afirmación tiene que deducirse sólamente de las cosas que dijeron y nada más.
+ 
+Igual a debuggear un código, uno necesita práctica para detectar los errores más comunes, tipo dividir por cero, acceder a una posición de memoria inválida, etc. Lo malo es que a diferencia del código en Python, para correr este algoritmo en una computadora hay que pasarlo a un lenguaje formal, lo cual tarda el cuádruple#footnote[Resulta que a de Bruijn se le ocurrió primero pensar en la comparación entre escribir una demo en lenguaje natural y en un lenguaje formal, y parece que más o menos para cualquier demostración se mantiene constante la relación; es decir, no es que demostraciones informales más largas ahorran cada vez más cosas, sino que la cantidad de líneas que se ahorran por cada línea informal escrita es constante y más o menos 4, dependiendo del área. A esto se lo llama el _factor de de Bruijn_ y hay gente que #link("https://www.cs.ru.nl/~freek/factor/")[lo analizó].], así que estamos cuasi obligados a correrlos en la cabeza.
 
 #ejercicio[Entren a la materia que más les guste de CubaWiki (álgebra, análisis, Algo 2, Algo 3) y busquen cualquier demo de un alumno. Traten de ver qué errores de estos tienen.]
 
 == Recomendaciones
+=== Practiquen, practiquen, practiquen.
+No importa cuántas demos lean, sin práctica no van a darse cuenta qué cosas hacen mal ustedes en demos, y no las van a poder mejorar.
+
 === Pasen las ideas a definiciones formales.
 Por ejemplo, qué quiere decir "círculo"? En grafos, qué quiere decir "camino"? Qué quiere decir "el máximo de un conjunto"? Sin pasar estas ideas a definiciones formales no podemos aplicarles los teoremas y axiomas que son súper útiles, y nos quedamos siempre en el mundo de la intuición.
 
@@ -174,11 +193,12 @@ Es más fácil transformar la demo en un lenguaje tipo Lean si lo que escribiero
 - "Si ..., entonces..."
 - "Tal cosa pasa si y solo si pasa tal otra."
 - etc.
+
+=== Separen sus demos en lemitas.
+Agarren una afirmación que no estén seguros si está suficientemente justificada, y escriban un Lema que sea sólo esa afirmación. Pónganle la mínima cantidad de hipótesis que necesite la afirmación para ser cierta. Demuestren ese lemita por separado. Es más fácil entender una demo si está dividida en afirmaciones. Además, ayuda a identificar si las hipótesis que tenés son suficientes para demostrar la afirmación, o si necesitás algo más.
+
 === Lean muchas demos bien escritas del área.
 Por ej, el Cormen en el caso de Algo 3.
-
-=== Practiquen, practiquen, practiquen.
-No importa cuántas demos lean, sin práctica no van a darse cuenta qué cosas hacen mal ustedes en demos, y no las van a poder mejorar.
 
 === Muestren sus demos a sus compañeros y a los profes.
 Al ser medio subjetivo cuándo una demo es suficientemente formal, cuantas más opiniones tengan más seguros van a estar de que está bien lo que escribieron.
@@ -187,13 +207,11 @@ Al ser medio subjetivo cuándo una demo es suficientemente formal, cuantas más 
 Siempre que escribo una demo para un artículo, la versión que envío al journal es como la 5ta versión a veces, nunca la primera. No tengan miedo de reescribir todo de nuevo, total las ideas no se pierden, ya las tienen en la cabeza.
 
 === Escriban bien, loco.
-Es muy difícil leer una demo con frases gigantes con comas en cualquier lado, o con caligrafía que parece hecha con el pie. El que los corrige va a tener super mal humor si tiene que leer una cosa así, y no va a tener ganas de corregirla bien.
+Es muy difícil leer una demo con frases gigantes con comas en cualquier lado, o con caligrafía que parece hecha con el pie. El que los corrige va a tener super mal humor si tiene que leer una cosa así, y va a tener cero ganas de corregirla bien.
 
 #ejercicio[Agarren la demo que encontraron antes que tenía el error y escríbanla de cero. Hagan muchas versiones, y hagan que cada versión sea más formal que la anterior, hasta llegar a usar sólo axiomas, teoremas y definiciones que sepan que son verdaderos. Si en un momento llegan a que no pueden formalizarla más, consulten con un compañero y/o conmigo.]
 
 == Biblografía útil
 
-Hay #link("https://github.com/fedelebron/algo3/blob/main/Clases/Demostraciones.pdf")[un libro de demostraciones] que escribió Fede Lebrón (para los que no lo conocen, ayuda mucho en el canal de Telegram de Algo3) que está lleno de demos y tiene muchísimos tips de qué hacer para demostrar en lenguaje natural.
-
-Otros libros en inglés que ayudan con demostraciones son https://users.metu.edu.tr/serge/courses/111-2011/textbook-math111.pdf y
-https://longformmath.com/proofs-book/.
+Hay #link("https://github.com/fedelebron/algo3/blob/main/Clases/Demostraciones.pdf")[un libro de demostraciones] que escribió Fede Lebrón (para los que no lo conocen, ayuda mucho en el canal de Telegram de Algo3) que está lleno de demos y tiene muchísimos tips de qué hacer para demostrar en lenguaje natural. Otros libros en inglés que encontré que ayudan con demostraciones son https://users.metu.edu.tr/serge/courses/111-2011/textbook-math111.pdf y
+https://longformmath.com/proofs-book/. Y siempre está bueno leer la bibliografía recomendada del curso que estén haciendo.

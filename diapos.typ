@@ -23,7 +23,7 @@
   config-info(
     title: "Qué $#%\*& es una demostración?",
     author: "Eric Brandwein",
-    date: "22/08/2025",
+    date: "25/08/2025",
     institution: "Cubaweeki 2025"
   )
 )
@@ -189,8 +189,9 @@ Entren a la materia que más les guste de https://cubawiki.com.ar (álgebra, an�
 
 - Usen expresiones estándar.#pause
 
-- Lean muchas demos bien escritas del área.#pause
+- Separen sus demos en lemitas. #pause
 
+- Lean muchas demos bien escritas del área.#pause
 
 - Muestren sus demos a sus compañeros y a los profes.#pause
 
