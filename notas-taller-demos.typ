@@ -215,3 +215,5 @@ Es muy difícil leer una demo con frases gigantes con comas en cualquier lado, o
 
 Hay #link("https://github.com/fedelebron/algo3/blob/main/Clases/Demostraciones.pdf")[un libro de demostraciones] que escribió Fede Lebrón (para los que no lo conocen, ayuda mucho en el canal de Telegram de Algo3) que está lleno de demos y tiene muchísimos tips de qué hacer para demostrar en lenguaje natural. Otros libros en inglés que encontré que ayudan con demostraciones son https://users.metu.edu.tr/serge/courses/111-2011/textbook-math111.pdf y
 https://longformmath.com/proofs-book/. Y siempre está bueno leer la bibliografía recomendada del curso que estén haciendo.
+
+Para otra forma de escribir demostraciones formales más cercana a lenguaje natural, pueden ver si les gusta https://github.com/PatrickMassot/verbose-lean4 o https://impermeable.github.io/.
